@@ -5,6 +5,8 @@ import { API_URL } from '../App';
 import { toast } from 'react-toastify';
 import Table from 'react-bootstrap/Table';
 import { useNavigate } from 'react-router-dom';
+import Button from 'react-bootstrap/Button';
+
 
 
 function Dashboard() {
@@ -81,9 +83,9 @@ useEffect(()=>{
                </td>
                <td>{e.status?"Active":"InActive"}</td>
                <td>
-                <Button variant='info' onClick={()=>navigate(`/edit/${e.id}`)}>Edit</Button>
+                <Button variant='info' onClick={()=>navigate(`/edit/${e.id}`)}> Edit </Button>
              &nbsp;
-                <Button variant='danger' onClick={()=>handelDelet(e.id)}>Delete</Button>
+                <Button variant='danger' onClick={()=>handelDelet(e.id)}> Delete </Button>
                </td>
              
 
